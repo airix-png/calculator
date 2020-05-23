@@ -170,6 +170,7 @@ let back = document.querySelector ('.back');
     back.addEventListener('click', e => {
         buttonPressed(e.target); 
         screen3.textContent = "";
+        if (screen.textContent === "NaN") {return}
         screen.textContent = screen.textContent.slice(0, -1);
     })
 
