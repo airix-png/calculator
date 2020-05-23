@@ -1,0 +1,150 @@
+html {font-family: montserrat, sans-serif;
+    background: rgb(178,164,164);
+    background: linear-gradient(140deg, #4C566A
+    0%, rgba(214,170,170,1) 67%);
+    outline: none;}
+
+
+
+.container {display: grid;
+    grid-template-rows: repeat(7, 1fr); 
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-areas: 
+    "screen2 screen2 screen2 screen2"
+    "screen1 screen1 screen1 screen1"
+    "clear back percentage divide"
+    "seven eight nine multiply"
+    "four five six subtract"
+    "one two three add"
+    "decimal zero negative equal";
+    grid-gap: 8px; 
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 350px;
+    height: 600px;
+    padding: 0px 17px 20px 12px; 
+    top: 300px;
+    justify-items: center;
+    align-items: center; 
+    background-color: #1F1F1F;
+    border-radius: 24px;
+    box-shadow: 3px 3px 7px  rgba(0, 0, 0, 0.8), -1px 3px 5px rgba(0, 0, 0, 0.8);
+    color: #e6f4ff;
+
+}
+
+#screen {
+    grid-area: screen1;
+    font-size: 48px;
+    width: 342px;
+    text-align: right; 
+    overflow: hidden;
+    padding-bottom: 12px;
+
+}
+
+#screen2 {
+    grid-area: screen2;
+    font-size: 24px;
+    width: 330px;
+    padding: 0px 12px;
+    text-align: right; 
+    color: rgba(214,170,170,0.4)
+
+}
+
+button {
+    border-radius: 50%;
+    border: 1px solid #2f2f2f;
+    background: #2f2f2f;
+    color: #ECEFF4;
+    width: 75px; 
+    height: 75px; 
+    font-size: 20px;
+    box-shadow: 3px 3px 7px  rgba(0, 0, 0, 0.8)
+}
+
+.clicked {
+    opacity: 0.8;
+    transform: translateY(3px);
+}
+
+button:focus {
+    outline: none
+}
+
+ 
+#digit-1 {grid-area: one}
+#digit-2 {grid-area: two}
+#digit-3 {grid-area: three}
+#digit-4 {grid-area: four}
+#digit-5 {grid-area: five}
+#digit-6 {grid-area: six}
+#digit-7 {grid-area: seven}
+#digit-8 {grid-area: eight}
+#digit-9 {grid-area: nine}
+#digit-0 {grid-area: zero;}
+#digit-deci {grid-area: decimal}
+
+#op-add {grid-area: add;
+color: #5E81AC}
+#op-sub {grid-area: subtract;
+    color: #5E81AC}
+#op-multi {grid-area: multiply;
+    color: #5E81AC}
+#op-div {grid-area: divide;
+    color: #5E81AC}
+#op-equal {grid-area: equal;
+    color: #1F1F1F;
+    background-color: #5E81AC;
+}
+#op-clear {grid-area: clear;
+    color: rgba(214,170,170,1)
+}
+#op-back {grid-area: back;
+color: #c3909b}
+#op-percent {grid-area: percentage;
+    color: #c3909b}
+#op-neg {grid-area: negative}
+
+.corner {position: absolute;
+margin: auto;
+left: 0;
+right: 0;
+text-align: center;
+font-size: 11px;
+width: 160px;
+top: 970px;
+font-weight: 400;
+color: #1f1f1f;
+opacity: 0.6
+}
+
+.sig {position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    color: black;
+    bottom: -70px;
+    opacity: 0.8
+}
+
+
+#watermark {
+    height: 1000px;
+    width: 1000px;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  #watermark p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ECEFF4;
+    font-size: 137px;
+    opacity: 0.1;
+    pointer-events: none;
+  }
