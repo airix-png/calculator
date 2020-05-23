@@ -48,8 +48,14 @@ btnOperator.map(btn => {
             if (screen.textContent === "Error: Can't divide by 0!") {
                 clear();
                 return;
-            }    
-    
+            }     
+        if (screen.textContent === "" && screen2.textContent === ""){      //To use equal value 
+                input1 = Number(screen3.textContent);
+                operation1 = e.target.value;               
+                screen3.textContent = "";                    
+                screen2.textContent = input1 + operation1;
+                return;
+            }   
         if (screen2.textContent === ""){                //Step 1: if screen2 is empty then take screen1 and make it = to input1
             if (screen.textContent === "") {return;}
             input1 = Number(screen.textContent);
@@ -58,6 +64,8 @@ btnOperator.map(btn => {
             screen2.textContent = input1 + operation1;
             return;
         }
+
+        
 
         if (!operation2) {
             if (operation1 === "×" || operation1 === "÷" || operation1 === "+" || operation1 === "-"){
