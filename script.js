@@ -150,6 +150,7 @@ function buttonPressed(btn) {
 function clear(){
     screen.textContent = "";
     screen2.textContent = "";
+    screen3.textContent = "";
     input1 = "";
     input2 = "";
     input3 = "";
@@ -168,26 +169,31 @@ let clearAll = document.querySelector (".clear");
 let back = document.querySelector ('.back');
     back.addEventListener('click', e => {
         buttonPressed(e.target); 
+        screen3.textContent = "";
         screen.textContent = screen.textContent.slice(0, -1);
     })
 
 let decimal = document.querySelector ('.decimal');
     decimal.addEventListener('click', e => {
         buttonPressed(e.target); 
+        screen3.textContent = "";
         if (screen.textContent === "" || screen.textContent.includes(".")) {return}
         screen.textContent += "."
+        
     })
 
 
 let percent = document.querySelector ('.percent');
     percent.addEventListener('click', e => {
         buttonPressed(e.target); 
+        screen3.textContent = "";
         screen.textContent = parseFloat(screen.textContent) * .01; 
     })
 
 let negative = document.querySelector ('.negative');
     negative.addEventListener('click', e => {
         buttonPressed(e.target); 
+        screen3.textContent = "";
         screen.textContent = parseFloat(screen.textContent) * -1; 
     })
 
