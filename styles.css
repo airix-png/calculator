@@ -55,6 +55,17 @@ html {font-family: montserrat, sans-serif;
 
 }
 
+#screen3 {
+    grid-area: screen1;
+    font-size: 48px;
+    width: 342px;
+    text-align: right; 
+    overflow: hidden;
+    padding-bottom: 12px;
+
+}
+
+
 button {
     border-radius: 50%;
     border: 1px solid #2f2f2f;

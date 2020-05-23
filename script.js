@@ -5,6 +5,8 @@ let btnOperator = Array.from(document.querySelectorAll('.operator'));
 let equal = document.querySelector ('.equal')
 let screen = document.querySelector ('#screen')
 let screen2 = document.querySelector ('#screen2')
+let screen3 = document.querySelector ('#screen3')
+
 
 let input1 = ""
 let input2 = ""
@@ -19,6 +21,7 @@ let operation2 = ""
 btnDigits.map(btn => {
     btn.addEventListener('click', e => {
         buttonPressed(e.target);
+        screen3.textContent = "";
 
         if (screen.textContent === 'NaN') {
             clear()
@@ -29,12 +32,12 @@ btnDigits.map(btn => {
             else {
                 screen.textContent += e.target.value; 
             }
-        })})
+        }
+        )})
 
 btnOperator.map(btn => {
     btn.addEventListener('click', e => {
         buttonPressed(e.target);
-
         if (operation1 === "÷" || operation2 === "÷")
             if(screen.textContent === "0" || screen.textContent === "0.") {
                 clear();
@@ -79,7 +82,7 @@ btnOperator.map(btn => {
                     screen2.textContent = input1 + operation1}
                 }
             else {
-                if (input1) {                    
+                if (input1) {   
                     operation1 = e.target.value; 
                     screen2.textContent = input1 + operation2; 
                 }
@@ -110,7 +113,8 @@ equal.addEventListener ('click', e => {
             input2 = "";
         }
     }
-    screen.textContent = roundNumber(input1);
+    screen3.textContent = roundNumber(input1); 
+    screen.textContent = "";
     screen2.textContent = "";
     operation1 = ""
     operation2 = ""
